@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "slug": "courseware-demo",
+  "title": "把变化画出来",
+  "summary": "从一条直线开始，亲手改变参数，让抽象的数学变得具体。",
+  "description": "一门关于观察与变化的交互式示范课程。通过理论、随堂判断和可操作的直线实验，理解斜率与截距的含义。本课程同时展示 Courseware 课程规范中的章节、教学分组、计划课时和下载资源。",
+  "language": "zh-CN",
+  "tags": [
+    "数学直觉",
+    "交互实验",
+    "入门"
+  ],
+  "level": "introductory",
+  "entry": "web/index.html",
+  "images": [
+    {
+      "id": "course-cover",
+      "role": "cover",
+      "path": "assets/cover.png",
+      "alt": "坐标平面上的多条直线展示斜率变化",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "creators": [
+    {
+      "id": "courseware-demo-team",
+      "name": "Courseware 示例项目",
+      "roles": [
+        "author",
+        "instructor"
+      ],
+      "organization": "规范示范课程",
+      "bio": "用于展示课程仓库标准和交互式内容的示例署名，不对应平台登录账号。"
+    }
+  ],
+  "groups": [
+    {
+      "id": "theory",
+      "title": "理解概念"
+    },
+    {
+      "id": "lab",
+      "title": "动手实验"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "concepts",
+      "title": "认识直线与参数"
+    },
+    {
+      "id": "observation",
+      "title": "观察变化与验证"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "introduction",
+      "title": "一条直线里的两个参数",
+      "summary": "认识斜率与截距，把公式和图像对应起来。",
+      "group_id": "theory",
+      "kind": "theory",
+      "chapter_ids": [
+        "concepts"
+      ],
+      "creator_ids": [
+        "courseware-demo-team"
+      ],
+      "status": "published",
+      "entry": "lessons/theory/introduction/web/index.html",
+      "keywords": [
+        "斜率",
+        "截距",
+        "直线"
+      ],
+      "duration_minutes": 15
+    },
+    {
+      "id": "experiment",
+      "title": "亲手改变一条直线",
+      "summary": "拖动参数观察变化，并通过示例数据验证自己的判断。",
+      "group_id": "lab",
+      "kind": "lab",
+      "chapter_ids": [
+        "concepts",
+        "observation"
+      ],
+      "creator_ids": [
+        "courseware-demo-team"
+      ],
+      "status": "published",
+      "entry": "lessons/lab/experiment/web/index.html",
+      "keywords": [
+        "交互",
+        "参数",
+        "实验"
+      ],
+      "duration_minutes": 20
+    },
+    {
+      "id": "curves",
+      "title": "从直线到曲线",
+      "summary": "进一步认识非线性的变化。",
+      "group_id": "theory",
+      "kind": "theory",
+      "chapter_ids": [
+        "observation"
+      ],
+      "creator_ids": [
+        "courseware-demo-team"
+      ],
+      "status": "planned",
+      "keywords": [
+        "曲线"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "line-data",
+      "title": "直线示例数据 y = 2x + 1",
+      "kind": "dataset",
+      "path": "lessons/lab/experiment/code/line-example.csv",
+      "lesson_ids": [
+        "experiment"
+      ]
+    }
+  ],
+  "publish": {
+    "include": [
+      "web/",
+      "assets/",
+      "lessons/theory/introduction/web/",
+      "lessons/lab/experiment/web/",
+      "lessons/lab/experiment/code/"
+    ]
+  }
+}
